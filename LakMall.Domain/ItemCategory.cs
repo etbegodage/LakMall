@@ -16,5 +16,8 @@ namespace LakMall.Domain
         [StringLength(120, ErrorMessage = "Category Name can only contain 120 or less characters.")]
         public string CategoryName { get; set; }
 
+        public string   CategoryType { get; set; }
+        public int SortOrder { get; set; }
+
     }
 }
