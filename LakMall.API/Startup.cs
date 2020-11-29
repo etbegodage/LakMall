@@ -30,7 +30,7 @@ namespace LakMall.API
         {
             services.AddControllers();
             services.AddHttpContextAccessor();
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LakMallDb"),mg=>mg.MigrationsAssembly("LakMail.DAL")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),mg=>mg.MigrationsAssembly("LakMall.DAL")));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
